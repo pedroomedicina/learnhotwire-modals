@@ -4,6 +4,8 @@
 
 <h1>Blog posts</h1>
 
+<%= link_to "New blog post", new_blog_post_path, data: { turbo_stream: true } %>
+
 <div id="blog_posts">
   <% @blog_posts.each do |blog_post| %>
     <%= render blog_post %>
@@ -12,5 +14,3 @@
     </p>
   <% end %>
 </div>
-
-<%= link_to "New blog post", new_blog_post_path %>
