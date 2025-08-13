@@ -23,5 +23,6 @@
 
   <div>
     <%= form.submit %>
+    <%= button_tag "Cancel", formmethod: :dialog if turbo_frame_request?%>
   </div>
 <% end %>
