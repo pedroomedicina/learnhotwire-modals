@@ -5,3 +5,9 @@ import "controllers"
 Turbo.StreamActions.visit = function() {
     Turbo.visit(this.getAttribute("location"))
 }
+
+Turbo.StreamActions.close_frame_dialog = function() {
+    this.targetElements.forEach(element => {
+        return element.closest("dialog").close()       
+    })
+}

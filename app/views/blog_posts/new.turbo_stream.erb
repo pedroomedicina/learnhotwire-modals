@@ -1,5 +1,5 @@
 <%= turbo_stream.append_all "body" do %>
-    <dialog data-controller="dialog" data-turbo-temporary="true">
+    <dialog data-controller="dialog" data-turbo-temporary data-turbo-permanent>
         <article>
             <%= turbo_frame_tag "new_blog_post", src: new_blog_post_path%>
         </article>
