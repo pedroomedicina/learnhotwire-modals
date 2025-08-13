@@ -27,6 +27,7 @@ class BlogPostsController < ApplicationController
       if @blog_post.save
         format.html { redirect_to @blog_post, notice: "Blog post was successfully created." }
         format.json { render :show, status: :created, location: @blog_post }
+        format.turbo_stream
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @blog_post.errors, status: :unprocessable_entity }

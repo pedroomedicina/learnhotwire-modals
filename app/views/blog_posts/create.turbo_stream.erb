@@ -1,0 +1,4 @@
+<%# Only runs on success %>
+
+<%= turbo_stream_action_tag "visit", location: blog_post_path(@blog_post) %>
+<turbo-stream action="visit" location="/blog_posts/1"></turbo-stream>
